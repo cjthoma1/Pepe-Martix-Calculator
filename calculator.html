@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Pepe Matrix Calculator </title>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	 math="";
+     $( function() {
+       $( ".calcbody" ).draggable();
+     } );
+function Equals(){
+	math = eval(math);
+	document.getElementById('content').innerHTML = math;
+	
+}
+function NINE() {
+	math+="9";
+	document.getElementById('content').innerHTML = math;
+}
+function EIGHT(){
+	math+="8";
+	document.getElementById('content').innerHTML = math;	
+}
+function SEVEN(){
+	math+="7";
+	document.getElementById('content').innerHTML = math;	
+}
+function SIX(){
+	math+="6";
+	document.getElementById('content').innerHTML = math;	
+}
+function FIVE(){
+	math+="5";
+	document.getElementById('content').innerHTML = math;	
+}
+function FOUR(){
+	math+="4";
+	document.getElementById('content').innerHTML = math;	
+}
+function THREE(){
+	math+="3";
+	document.getElementById('content').innerHTML = math;	
+}
+function TWO(){
+	math+="2";
+	document.getElementById('content').innerHTML = math;	
+}
+function ONE(){
+	math+="1";
+	document.getElementById('content').innerHTML = math;	
+}
+function Zero(){
+	math+="0"
+	document.getElementById('content').innerHTML = math;
+}
+function Add(){
+	math+="+";
+	document.getElementById('content').innerHTML = math;		
+	}
+	function Subtract(){
+		math+="-";
+		document.getElementById('content').innerHTML = math;	
+	}
+function Minus(){
+	math+= "-";
+	document.getElementById('content').innerHTML = math;	
+}
+function Multiply(){
+	math+="*";
+	document.getElementById('content').innerHTML = math;	
+}
+function Divide(){
+	math+="/";
+	document.getElementById('content').innerHTML = math;	
+}
+function Clear(){
+	math="";
+	document.getElementById('content').innerHTML = math;	
+}
+function Decimal(){
+	math+=".";
+	document.getElementById('content').innerHTML = math;
+}
+function PlusMinus(){
+	temp= parseInt(math);
+	if(temp > 0){
+		temp -=temp*2;
+	} else {
+		temp -=temp*2;
+	}
+	math=temp.toString();
+	document.getElementById('content').innerHTML = math;
+}
+function Modulus(){
+	math=math/100;
+	document.getElementById('content').innerHTML = math;
+	
+}
+function Cray(){
+	document.body.style.backgroundColor = "red";	
+}
+</script>
+</head>
+<body>
+	
+	<div class ="calcbody">
+		<div class ="inputbox" id='content'></div>
+		<div class ="nine"><button onClick="NINE()" class="button"> 9 </button> </div>
+			<div class ="eight"><button onClick="EIGHT()" class="button"> 8 </button></div>
+			<div class ="seven"><button onClick="SEVEN()" class="button"> 7 </button></div>
+			<div class ="six"><button onClick="SIX()" class="button"> 6 </button> </div>
+			<div class ="five"><button onClick="FIVE()" class="button"> 5 </button></div>
+			<div class ="four"><button onClick="FOUR()" class="button"> 4 </button></div>
+			<div class ="three"><button onClick="THREE()" class="button"> 3 </button></div>
+			<div class ="two"><button onClick="TWO()" class="button"> 2 </button></div>
+			<div class ="one"><button onClick="ONE()" class="button"> 1 </button></div>
+			<div class ="zero"><button onClick="Zero()" class="button"> 0 </button></div>
+			<div class ="multiply"><button onClick="Multiply()" class="button"> * </button></div>
+			<div class ="divide"><button onClick="Divide()" class="button"> / </button></div>
+			<div class ="add"><button onClick="Add()" class="button"> + </button></div>
+			<div class ="modulus"><button onClick="Modulus()" class="button"> % </button></div>
+			<div class ="subtract"><button onClick="Subtract()" class="button"> - </button></div>
+			<div class ="plusminus"><button onClick="PlusMinus()" class="button"> +/- </button></div>
+			<div class ="clear"><button onClick="Clear()" class="button"> AC </button></div>
+			<div class ="equals"><button onClick="Equals()" class="button"> = </button></div>
+			<div class ="decimal"><button onClick="Decimal()" class="button"> . </button></div>
+			<div class ="cray"><button onClick="Cray()" class="button"> CRAY </button></div>
+		</div>			
+</body>
+</html>
