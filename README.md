@@ -1,4 +1,4 @@
-# README
+#Pepe Meme Calculator
 
 Pepe Meme Calculator written in HTML/CSS/JS
 
